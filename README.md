@@ -39,9 +39,17 @@ Diagrama generado con la base de datos en MySQL
 
 :small_blue_diamond: **Tabla paquetes**: Almacena la información de todos los paquetes, tales cómo: el id(identificador) del paquete, peso, tipo de paquete y valor declarado.
 
+
+![imagen](https://user-images.githubusercontent.com/114439510/235053025-1b091688-9348-471f-99dd-9066b3cb274a.png)
+
+Para el consumo, consultas, peticiones y visualización de nuestros endpoints en nuestra API REST, se utilizó la herramienta de **Insomnia**, probando todos nuestras verbos HTTP obteniendo respuestas en ejecución y tiempo real. Las cuáles están divididas y ordenadas según necesidad para realizar la petición HTTP (GET,POST, PUT, DELETE).
+
+![imagen](https://user-images.githubusercontent.com/114439510/235054254-a52fa2e9-f224-43dc-9169-93724b1c8053.png)
+
+
 ## Microservicios
 El proyecto constaba de tres microservicios: Cliente, Empleado, Envío y Paquete. Estos microservicios se comunicaron entre sí utilizando el protocolo HTTP, lo que permitió una comunicación eficiente y escalable entre los servicios. Lo que facilitó la evolución de cada uno de los servicios de manera independiente.
-
+__________
 ## :dart: Endpoints:
 ### Endpoint creación del cliente:
 ***![imagen](https://user-images.githubusercontent.com/114439510/234991150-0966b197-a91f-482d-94be-7b094dab2688.png)***
@@ -83,6 +91,98 @@ Este endpoint permite eliminar un cliente existente en la base de datos por su c
 En este caso, retonará un mensaje indicando que la petición DELETE fue exitosa:
 
 ![imagen](https://user-images.githubusercontent.com/114439510/234993643-3b81ec5d-4305-4a4b-9d2b-ce8f58d477e7.png)
+__________
+
+### Endpoint creación del empleado:
+***![imagen](https://user-images.githubusercontent.com/114439510/235055145-5a790ccb-60a0-47a2-90a5-e29fd429760c.png)***
+
+Crea un nuevo empleado en la base de datos con la información necesaria en el body de la solicitud.
+
+Parámetros de ingreso del cliente en formato JSON:
+
+Una vez ingresados, la API nos devolverá la creación exitosa de un empleado en formato JSON.
+
+![imagen](https://user-images.githubusercontent.com/114439510/235055275-9c9bbc99-d872-4243-96bc-d8fc5f3bddb4.png)
+
+### Endpoint obtener informacion del empleado:
+***![imagen](https://user-images.githubusercontent.com/114439510/235055707-825dbd7d-99fa-42ec-98f4-e938ece9afd6.png)***
+
+Este endpoint permite obtener/buscar los datos de un empleado mediante la cédula, es una funcionalidad que permite traer los datos de un empleado existente en la base de datos.
+
+![imagen](https://user-images.githubusercontent.com/114439510/235056047-03b1c09e-c23d-4718-9b07-391cb96ed28b.png)
+
+### Endpoint actualizar informacion del empleado:
+
+***![imagen](https://user-images.githubusercontent.com/114439510/235056410-cf34364c-6d80-4334-86ff-379db93b083b.png)***
+
+Este endpoint permite actualizar los datos de un cliente es una funcionalidad que permite a los usuarios modificar la información filtrando por la cédula de un cliente existente en la base de datos.
+
+Empleado creado anteriormente:
+
+![imagen](https://user-images.githubusercontent.com/114439510/235055275-9c9bbc99-d872-4243-96bc-d8fc5f3bddb4.png)
+
+Empleado actualizado apartir de la cédula:
+
+***![imagen](https://user-images.githubusercontent.com/114439510/235056601-039ed29f-61e1-4eff-9670-7b81a7a06b10.png)***
+
+### Endpoint eliminar un empleado por cédula:
+![imagen](https://user-images.githubusercontent.com/114439510/235056783-f6b45e7b-33b9-4759-b16b-8dd36debd90b.png)
+
+Este endpoint permite eliminar un empleado existente en la base de datos por su cédula.
+
+En este caso, retonará un mensaje indicando que la petición DELETE fue exitosa:
+![imagen](https://user-images.githubusercontent.com/114439510/235056811-0fde35aa-978f-40ee-968d-c36d2f10b589.png)
+__________
+
+### Endpoint creación del envío:
+***![imagen](https://user-images.githubusercontent.com/114439510/235057694-0c10a88e-9265-4e14-84e3-38ac530cbe50.png)***
+
+Una vez que un cliente desee enviar un paquete, nuestro sistema de mensajería express realiza un servicio para la gestión de los envíos, el cuál recibe como parámetros para la creación del envío y paquetes los siguientes datos:
+
+Ejemplo de la petición:
+Nota: El cliente debe estar registrado previamente en nuestro sistema para la realización del envío
+
+![imagen](https://user-images.githubusercontent.com/114439510/235059276-6ed8af32-039f-4004-b17c-2bc0458aa33b.png)
+
+Una vez ingresados, la API nos devolverá la creación exitosa de un envío en formato JSON, la cuál nos entregará el número de guía y un estado incial del envío que será "RECIBIDO".
+
+![imagen](https://user-images.githubusercontent.com/114439510/235059388-4f944ef7-9f84-421c-b425-0ac2efcf3e1c.png)
+
+### Endpoint obtener informacion del envío:
+***![imagen](https://user-images.githubusercontent.com/114439510/235059610-2ceb50e2-a401-4f74-94f1-c3ca73ee9ac2.png)***
+
+Este endpoint permite obtener/buscar los datos de el envío mediante el número de guía generado por nuestro sistema, es una funcionalidad que permite traer los datos del envío/paquete existente en la base de datos.
+
+![imagen](https://user-images.githubusercontent.com/114439510/235059708-80cc02da-7d58-4b27-8884-270e48e47b90.png)
+
+### Endpoint obtener envios filtrando por el estado del envío y la cédula del empleado.
+
+***![imagen](https://user-images.githubusercontent.com/114439510/235060488-3ba8b642-52a6-4c06-949c-5209981e411d.png)***
+
+Nos permite que el servicio de envios pueda filtrar para mostrar todos los pedidos que se encuentren en determinado estado.
+
+![imagen](https://user-images.githubusercontent.com/114439510/235060659-b6d86690-3833-4518-a8e9-48dba72ead3e.png)
+
+
+### Endpoint para actualizar el estado del paquete:
+
+![imagen](https://user-images.githubusercontent.com/114439510/235061081-85cbb631-4857-4126-b751-8724e7d65ae8.png)
+
+Ejemplo de la petición:
+
+![imagen](https://user-images.githubusercontent.com/114439510/235061503-14cd4e51-e115-4f9e-a7dd-a98da45a97bd.png)
+
+
+Este endpoint permite actualizar el estado de un paquete:  "RECIBDIDO" -> "EN RUTA", -> "ENTREGADO".
+
+En este caso, actualizamos el estado del envío a "EN RUTA" y la API nos retornará cambio de estado:
+
+![imagen](https://user-images.githubusercontent.com/114439510/235061582-b0c049ce-d094-4b4c-830f-81ced636e411.png)
+
+
+
+
+
 
 
 
