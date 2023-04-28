@@ -180,7 +180,7 @@ En este caso, actualizamos el estado del envío a "EN RUTA" y la API nos retorna
 
 
 ## Test Unitarios:
-Dentro del proyecto se implementó Mockito & JUnit en el cual se pudo verificar el correcto funcionamiento de los componetes,métodos y sistemas empleados. 
+Dentro del proyecto se implementó Mockito & JUnit en el cual se pudo verificar el correcto funcionamiento de los componetes, métodos y sistemas empleados. 
 
 ## :pushpin: CI-Integración Continua:
 En el proyecto utilicé la integración continua (CI) para automatizar el proceso de construcción, prueba y despliegue de mi aplicación. Utilicé GitHub Actions para configurar y ejecutar mis flujos de trabajo de CI, lo que me permitió detectar y solucionar problemas de manera más rápida y eficiente, así como liberar nuevas versiones de mi aplicación con mayor frecuencia y confianza.
