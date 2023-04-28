@@ -44,7 +44,7 @@ Diagrama generado con la base de datos en MySQL
 
 Para el consumo, consultas, peticiones y visualización de nuestros endpoints en nuestra API REST, se utilizó la herramienta de **Insomnia**, probando todos nuestras verbos HTTP obteniendo respuestas en ejecución y tiempo real. Las cuáles están divididas y ordenadas según necesidad para realizar la petición HTTP (GET,POST, PUT, DELETE).
 
-![imagen](https://user-images.githubusercontent.com/114439510/235054254-a52fa2e9-f224-43dc-9169-93724b1c8053.png)
+![imagen](https://user-images.githubusercontent.com/114439510/235062937-61f6fe66-1530-418d-9cce-93eddab307bf.png)
 
 
 ## Microservicios
@@ -98,7 +98,7 @@ __________
 
 Crea un nuevo empleado en la base de datos con la información necesaria en el body de la solicitud.
 
-Parámetros de ingreso del cliente en formato JSON:
+Parámetros de ingreso del empleado en formato JSON:
 
 Una vez ingresados, la API nos devolverá la creación exitosa de un empleado en formato JSON.
 
@@ -172,7 +172,6 @@ Ejemplo de la petición:
 
 ![imagen](https://user-images.githubusercontent.com/114439510/235061503-14cd4e51-e115-4f9e-a7dd-a98da45a97bd.png)
 
-
 Este endpoint permite actualizar el estado de un paquete:  "RECIBDIDO" -> "EN RUTA", -> "ENTREGADO".
 
 En este caso, actualizamos el estado del envío a "EN RUTA" y la API nos retornará cambio de estado:
@@ -180,6 +179,16 @@ En este caso, actualizamos el estado del envío a "EN RUTA" y la API nos retorna
 ![imagen](https://user-images.githubusercontent.com/114439510/235061582-b0c049ce-d094-4b4c-830f-81ced636e411.png)
 
 
+## Test Unitarios:
+Dentro del proyecto se implementó Mockito & JUnit en el cual se pudo verificar el correcto funcionamiento de los componetes,métodos y sistemas empleados. 
+
+## :pushpin: CI-Integración Continua:
+En el proyecto utilicé la integración continua (CI) para automatizar el proceso de construcción, prueba y despliegue de mi aplicación. Utilicé GitHub Actions para configurar y ejecutar mis flujos de trabajo de CI, lo que me permitió detectar y solucionar problemas de manera más rápida y eficiente, así como liberar nuevas versiones de mi aplicación con mayor frecuencia y confianza.
+Cada vez que se realizaba una solicitud o se realizaban cambios en el código, se ejecutaba automáticamente una serie de pruebas y verificaciones de calidad, lo que me permitió identificar y solucionar errores en una etapa temprana del proceso de desarrollo.
+
+## :pushpin: CD-Despliegue Continuo:
+En mi proyecto utilicé la entrega continua (CD) para automatizar el proceso de despliegue de mi aplicación en entornos de producción. Utilicé Railway para implementar y gestionar mi infraestructura de manera sencilla y escalable.
+Configuré mi flujo de trabajo de CD en GitHub Actions para que, después de que las pruebas de integración y calidad fueran exitosas, se desplegara automáticamente la aplicación en Railway.
 
 
 
