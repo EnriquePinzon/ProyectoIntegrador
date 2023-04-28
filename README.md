@@ -6,7 +6,7 @@ El proyecto utiliza una base de datos MySQL, para la persistencia de datos, empl
 
 Este proyecto de mensajería express se enfoca en brindar un sistema completo de seguimiento y gestión de envíos. Cuenta con módulos separados para Cliente, Empleado, Envío y Paquete.
 
-El proyecto también incluye una documentación clara y concisa en Swagger, que especifica los endpoints disponibles. Para garantizar la calidad del código, se han implementado pruebas unitarias utilizando Mockito y JUnit.
+El proyecto también incluye una documentación clara y concisa en Swagger, que especifica los endpoints disponibles. Para garantizar la calidad del código, se han implementado pruebas unitarias utilizando Mockito y JUnit. De igual forma se implementó una capa de seguridad para nuestra aplicación y servicios REST, con Spring Security, la cuál nos permite autorizar y autenticar usuarios, proteger endpoints y controlar el acceso a los recursos de la aplicación .
 ## Tecnologías
 CONFIGURACIÓN & REQUISITOS:
 
