@@ -1,4 +1,4 @@
-# API REST: Proyecto Integrador, Mensajería Express :postbox::fax:
+# API REST: Proyecto Integrador, Mensajería Express :fax:
 
 ## Descripción del proyecto
 La API REST de Mensajería Express es una aplicación basada en Spring Boot que permite a los usuarios enviar y realizar el seguimiento de paquetes. Construida con la versión 2.7.12-SNAPSHOT de Spring Boot y compatible con Java 11, esta API utiliza el protocolo HTTP para permitir la interacción con el sistema mediante endpoints establecidos.
