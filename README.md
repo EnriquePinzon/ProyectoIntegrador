@@ -26,6 +26,22 @@ CONFIGURACIÓN & REQUISITOS:
 
 Se utilizó el patrón DTO, para separar los datos que se transfieren entre las capas de la aplicación. La creación de las clases DTO, dieron su  utilidad y representación de datos, los cuales sirven para transportar los datos desde los controladores a los respectivos servicios.
 
+## Diagrama de clases UML
+
+### Cliente
+
+![Diagrama ClienteMensajeria](https://github.com/EnriquePinzon/ProyectoIntegrador/assets/114439510/a419bb1a-2458-4416-83c5-d04d76fdac09)
+
+### Empleado
+
+![Diagrama Empleado-Mensajeria](https://github.com/EnriquePinzon/ProyectoIntegrador/assets/114439510/f50f3f98-42d2-4514-a5c5-201c1fb06172)
+
+### Envio
+
+![Diagrama Envio-Mensajeria](https://github.com/EnriquePinzon/ProyectoIntegrador/assets/114439510/6f5b5e90-9887-455c-8df0-71ae357a86de)
+
+
+
 ## Modelo de Entidad-Relación
 Diagrama generado con la base de datos en MySQL
 
