@@ -41,7 +41,6 @@ Se utilizó el patrón DTO, para separar los datos que se transfieren entre las 
 ![Diagrama Envio-Mensajeria](https://github.com/EnriquePinzon/ProyectoIntegrador/assets/114439510/6f5b5e90-9887-455c-8df0-71ae357a86de)
 
 
-
 ## Modelo de Entidad-Relación
 Diagrama generado con la base de datos en MySQL
 
@@ -54,7 +53,7 @@ Diagrama generado con la base de datos en MySQL
 :small_blue_diamond: **Tabla envios**: Almacena la información de todos los envios, tales cómo: número de guia, ciudad de destino, ciudad origen, dirección destino, estado del envio, hora de entrega, nombre destinario, numero de la persona, valor del envio.
 
 :small_blue_diamond: **Tabla paquetes**: Almacena la información de todos los paquetes, tales cómo: el id(identificador) del paquete, peso, tipo de paquete y valor declarado.
-
+____________
 
 ![imagen](https://user-images.githubusercontent.com/114439510/235053025-1b091688-9348-471f-99dd-9066b3cb274a.png)
 
